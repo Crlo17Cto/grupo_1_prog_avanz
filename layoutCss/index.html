@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <!--Layout=marco de diseño html-->
+
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <section class="page">
+        <header class="headerContent">
+            <h1>MyStore</h1>
+        </header>
+        <nav class="menuContent">
+            <a href="#">Sección 1</a>
+            <a href="#">Sección 2</a>
+            <a href="#">Sección 3</a>
+            <a href="#">Sección 4</a>
+            <a href="#">Sección 5</a>
+        </nav>
+        <form action="#" method="post" class="formSearch">
+            <div>
+                <label>Artículo</label>
+                <input type="text" name="artículo" placeholder="ingrese el nombre del artículo">
+            </div>
+            <div>
+                <label>Ordenar por</label>
+                <select name="ordenarPor">
+                    <option>Promociones</option>
+                    <option>Menor a mayor precio</option>
+                    <option>Mayor a menor precio</option>
+                </select>
+            </div>
+            <div>
+                <button>Buscar</button>
+            </div>
+        </form>
+        <section class="bodyContent">
+            <h2>Lista de productos</h2>
+            <article>
+                <h3>Artículo 1</h3>
+                <img src="resource/img/artículo.jpg" alt="Artículo ejemplo">
+                <p>Esto es la descripción del artículo</p>
+                <p>Precio: $1'200.000</p>
+            </article>
+        </section>
+        <footer class="footerContent">
+            <p>Fin de la Página</p>
+        </footer>
+        <button class="btn">Ejemplo</button>
+    </section>
+</body>
+
+</html>
