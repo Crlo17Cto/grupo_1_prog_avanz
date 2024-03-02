@@ -11,7 +11,7 @@ img{
     width: 100vw;
     height: 100vh;
     overflow: auto;
-    overflow: hidden;
+    overflow: auto; /*para que desplace la pantalla*/
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-rows: 2fr 1fr 4fr 1fr;
@@ -24,12 +24,15 @@ img{
 .page .headerContent{
     background-color: #808080;
     grid-area: header;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 .page .menuContent{
     background-color: #c8c8c8;
     grid-area: menu;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: space-evenly; 
     align-items: center;
@@ -43,6 +46,38 @@ img{
 .page .bodyContent{
     background-color: #fff;
     grid-area: body;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.page .bodyContent .tituloArticulos{
+    width: 100%;
+    text-align: center;
+}
+
+.producto{
+    width: 250px;
+    border: 1px solid #000;
+    border-radius: 16px;
+    margin: 16px;
+    padding: 8px; /*margenes internas*/
+
+}
+
+.producto .descripcion{
+    display: none;
+}
+
+.producto:hover { 
+    border-color: #001eff;
+}
+
+.producto:hover .descripcion {
+    display: block;
+    color: #0000ff;
 }
 
 .page .footerContent{
@@ -53,7 +88,7 @@ img{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    position: relative; /*fixed para que el boton acompañe al momento de bajar el cursor*/
-    top: 0px;
-    right: 11px;
+    position: absolute; /*fixed para que el boton acompañe al momento de bajar el cursor*/
+    top: 0px; /*parte superior*/
+    left: 0px;
 }
